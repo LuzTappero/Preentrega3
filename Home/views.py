@@ -6,8 +6,11 @@ from django.http import HttpResponse
 # def Home(request):
 #     return render (request, "Home/templates/index.html")
 
-def Home(xx):
-    return HttpResponse("Welcome!")
+# def Home(xx):
+#     return HttpResponse("Welcome!")
+
+def Home (xx):
+    return render(xx, 'Home/index.html')
 
 
 
