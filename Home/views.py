@@ -9,7 +9,7 @@ from django.http import HttpResponse
 # def Home(xx):
 #     return HttpResponse("Welcome!")
 
-def Home (xx):
+def Home_view (xx):
     return render(xx, 'Home/index.html')
 
 
