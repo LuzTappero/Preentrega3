@@ -1,10 +1,9 @@
-from django.urls import path
-from django.http import HttpResponse
+from django.urls import path, include
+# from django.http import HttpResponse
+from . import views
 
-from Products.views import Products
-
-app_name = 'Products'
+# app_name = 'Products'
 
 urlpatterns = [
-    path ('Products/', Products, ),
+    path ('Products/', views.Products, name='Products'),
     ]
