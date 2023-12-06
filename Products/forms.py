@@ -1,18 +1,28 @@
 from django import forms
+from .models import  Comentario, Producto, CategoriaProducto
 
 class ProductoFormulario(forms.Form):
     nombre=forms.CharField(max_length=250)
     descripcion= forms.CharField()
     precio= forms.CharField()
+    categoria= forms.CharField()
 
 class BuscarProductoFormulario(forms.Form):
     nombre= forms.CharField(max_length=250)
 
-class CrearUsuario(forms.Form):
-    usuario= forms.CharField(max_length=255)
-    email= forms.CharField(max_length=100)
+class CrearComentarioFormulario(forms.Form):
+    nombre= forms.CharField(max_length=255)
+    edad= forms.IntegerField(max_value=120)
+    comentario= forms.CharField(max_length=10000)
 
-class BuscarUsuario(forms.Form):
-    usuario= forms.CharField(max_length=255)
+class BuscarComentarioFormulario(forms.Form):
+    edad= forms.IntegerField(max_value=120)
+
+class CrearCategoriaProductoFromulario(forms.Form):
+     nombre= forms.CharField(max_length=255)
+     descripcion= forms.CharField(max_length=5000)
+
+
+
 
 

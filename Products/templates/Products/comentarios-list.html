@@ -2,10 +2,10 @@
 
 {% block contenidoQueCambia %}
     <div style="background-color: rgba(216, 203, 186, 0.774);">
-        {% if productos %}
+        {% if comentarios %}
             <ul>
-                {% for producto in productos %}
-                    <li>{{producto.nombre}} {{producto.descripcion}} y su precio es {{producto.precio}}</li>
+                {% for comentario in comentarios %}
+                    <li>{{comentario.nombre}} {{comentario.comentario}} {{comentario.edad}}</li>
                 {% endfor %}
             </ul>
         {% endif %}

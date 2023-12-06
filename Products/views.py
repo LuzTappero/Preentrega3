@@ -1,12 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import ProductoFormulario, BuscarProductoFormulario , CrearUsuario, BuscarUsuario
-from .models import Producto, User
-
-
-
-
-
+from .forms import ProductoFormulario, BuscarProductoFormulario ,CrearComentarioFormulario, BuscarComentarioFormulario, CrearCategoriaProductoFromulario
+from .models import Producto, Comentario, CategoriaProducto
 
 def Products (request):
     return render(request, 'Products/products.html')
@@ -23,7 +18,7 @@ def crear_productos(request):
             modelo= Producto(
                 nombre=informacion_limpia["nombre"], 
                 descripcion=informacion_limpia["descripcion"], 
-                precio=informacion_limpia["precio"]
+                precio=informacion_limpia["precio"],
                 )
             modelo.save()
             return render(request, 'Products/products.html')
@@ -47,20 +42,67 @@ def buscar_productos(request):
     else:
         return render (request, 'Products/productos_list.html', context={})
 
-def crear_usuario(request):
-    if request.method == "GET":
-        context={"form": CrearUsuario}
-        return render(request, 'Products/crear_usuario.html', context)
+
+def crear_comentario(request):
+    if request.method== "GET":
+        context= {"form": CrearComentarioFormulario()}
+        return render(request, 'Products/crear-comentario-formulario.html', context)
     elif request.method == "POST":
-        formulario= CrearUsuario(request.POST)
+        formulario = CrearComentarioFormulario(request.POST)
         if formulario.is_valid():
             informacion_limpia= formulario.cleaned_data
-            usuario= informacion_limpia["usuario"]
-            email=informacion_limpia["email"]
-             #crea un nuevo usuario
-            user= User.objects.create_user(email=email, username=usuario,)
-            return render(request, 'Home/Home.html')
+            nuevo_comentario= Comentario(
+                nombre = informacion_limpia["nombre"],
+                edad = informacion_limpia["edad"],
+                comentario= informacion_limpia["comentario"]
+                )
+            nuevo_comentario.save()
+            return render(request, 'Products/products.html')
+        else:
+            context= {"form": formulario}
+            return render(request,'Products/crear-comentario-formulario.html', context)
+
+
+def buscar_comentario(request):
+    if request.method == "GET":
+        form = BuscarComentarioFormulario()
+        return render(request, 
+                     'Products/buscar_comentario_formulario.html',
+                      context= {"form": form} 
+                      )
+    elif request.method == "POST":
+        formulario = BuscarComentarioFormulario(request.POST)
+        if formulario.is_valid():
+            informacion= formulario.cleaned_data
+            comentarios_filtrados= Comentario.objects.filter(edad__icontains=informacion["edad"])
+            context= {"comentarios": comentarios_filtrados}
+            return render(request, 'Products/comentarios-list.html', context)
         
+    else:
+        return render (request, 'Products/comentarios-list.html', context={})
+
+
+def crear_categoria_producto(request):
+    if request.method == "GET":
+        context= {"form": CrearCategoriaProductoFromulario()}
+        return render(request, 'Products/crear-categorias-formulario.html', context)
+    elif request.method == "POST":
+        formulario= CrearCategoriaProductoFromulario(request.POST)
+        if formulario.is_valid():
+            informacion_limpia= formulario.cleaned_data
+            nueva_categoria=CategoriaProducto(
+                nombre= informacion_limpia["nombre"],
+                descripcion= informacion_limpia["descripcion"]
+            )
+            nueva_categoria.save()
+            return render (request,'Products/products.html')
+        else:
+            context= {"form": formulario}
+            return render (request, 'Products/crear-categorias-formulario.html', context)
+
+
+
+                
 
 
 
