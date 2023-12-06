@@ -31,7 +31,7 @@ En esta aplicación están desarrollados los 3 modelos solicitados para esta con
 Hay formularios para crear nuevos datos a las clases de PRODUCTO, COMENTARIO Y CATEGORIAPRODUCTO; 
 Hay formulario de busqueda para interaccionar con la base de datos con las clases PRODUCTO Y COMENTARIO. 
 
-En la seccion de url de la app 'Product' se encuentran las siguientes:
+En la seccion de url de la app 'Product' se encuentran las siguientes rutas:
  
 ##
 1. path ('Products/', views.Products, name='Products')---->Vista principal de la pestaña PRODUCTS
