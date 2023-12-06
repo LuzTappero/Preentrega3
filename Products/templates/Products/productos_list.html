@@ -1,0 +1,13 @@
+{% extends 'Products/products.html' %}
+
+{% block contenidoQueCambia %}
+    Acá está la lista de Productos
+    {% if productos %}
+        <ul>
+            {% for producto in productos %}
+                <li>{{producto.nombre}} {{producto.descripcion}} y su precio es {{producto.precio}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}
