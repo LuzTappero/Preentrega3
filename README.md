@@ -52,7 +52,7 @@ En el archivo templates/Products se encuentran los siguientes archivos:
 2. formulario-crear-producto.html
 3. busqueda-producto-formulario.html
 4. productos_list.html 
-Estos tres archivos son necesarios para la creacion de formularios de la clase 'Producto' tanto para insertar datos, como de busquedas; los mismos tienen un 'block y endblock' con el contenido necesario para el formulario y esta insertado en el template original de producto.
+- Estos tres archivos (2.3.4) son necesarios para la creacion de formularios de la clase 'Producto' tanto para insertar datos, como de busquedas; los mismos tienen un 'block y endblock' con el contenido necesario para el formulario y esta insertado en el template original de producto.
 
 5. crear-comentario-formulario.html
 6. buscar_comentario_formulario.html
