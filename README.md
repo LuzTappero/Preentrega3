@@ -36,9 +36,9 @@ En la seccion de url de la app 'Product' se encuentran las siguientes:
 path ('Products/', views.Products, name='Products')---->Vista principal de la pestaña PRODUCTS
 path ('Products/crear/', views.crear_productos, name="crear_productos") ----> Formulario para crear productos
 path ('Products/buscar/', views.buscar_productos , name="buscar_productos")----> Formulario para buscar productos
-path ('Products/crearComentario/', views.crear_comentario , name= "crear_comentario")---->Formulario para crear comentarios
-path ('Products/buscarComentario/', views.buscar_comentario, name="buscar_comentario")----> Formulario para buscar comentarios
-path ('Products/crearCategorias/', views.crear_categoria_producto, name="crear_categoria")----> Formulario para crear categorias
+path ('Products/crearComentario/', views.crear_comentario , name= "crear_comentario")---->Formulario para crear comentarios o reseñas
+path ('Products/buscarComentario/', views.buscar_comentario, name="buscar_comentario")----> Formulario para buscar comentarios o reseñas
+path ('Products/crearCategorias/', views.crear_categoria_producto, name="crear_categoria")----> Formulario para crear categorias de productos
 
 #Configurar forms
 En el archivo forms.py se encuentran los formularios previamente nombrados; tanto de creación de datos como de búsqueda;
