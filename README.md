@@ -1,15 +1,10 @@
-# Miproyectofinal
-Coffeeshop
+# TERCERA PRE ENTREGA
 
-## Configuración inicial del proyecto
+#Configuración inicial del proyecto
 
 0. Instalar `django`:  `pip install django`
 1. Crear carpeta para nuestro repositorio, yo elegí nombrarla: "MIPROYECTOFINAL.PY"
-2. dentro de esa carpeta: `django-admin startproject MIPROYECTOFINAL`. Este comando dejará creada una nueva carpeta `MIPROYECTOFINAL` con una
-estructura como esta:
-```bash
-# directorio: MIPROYECTOFINAL
-MIPROYECTOFINAL  # <--- directorio principal del proyecto (nombre repetido)
+2. dentro de esa carpeta: `django-admin startproject MIPROYECTOFINAL`. Este comando dejará creada una nueva carpeta `MIPROYECTOFINAL`
 
 3. Dentro de la carpeta `proyecto-final-47790/MIPROYECTOFINAL/MIPROYECTOFINAL` corri el comando `python manage.py startapp Home` y a continuación realice lo mismo para las aplicaciones Products y Store.
 es decir mi aplicación contiene la Aplicacion de MIPROYECTOFINAL donde se encuentra el archivo Settings en el cual se guardan las aplicaciones creadas, y las url generales.
@@ -21,11 +16,11 @@ Se encuentra la siguiente URL:
 path ('', views.Home, name='home'), la cual lleva a la página principal del proyecto.
 
 En teplates de Home se encuentra el siguiente template:
-☼index.html que posee el contenido de la pagina principal(Home)
-☼navbar.html que posee el contenido de la barra de navegación que es común a las tres pestañas
-☼footer.html que posee el contenido de la barra de navegación que es común a las tres pestañas
+1.index.html que posee el contenido de la pagina principal(Home)
+2.navbar.html que posee el contenido de la barra de navegación que es común a las tres pestañas
+3.footer.html que posee el contenido de la barra de navegación que es común a las tres pestañas
 
-En Static de Home se encuentran todos los archivos estaticos provenientes de CSS que le dan el estilo a la página.
+En la carpeta Static de Home se encuentran todos los archivos estaticos provenientes de CSS que le dan el estilo a la página.
 
 APP Product:
 En esta aplicación están desarrollados los 3 modelos solicitados para esta consigna y los formularios correspondientes; allí se encuentra: 
@@ -51,22 +46,22 @@ En el archivo forms.py se encuentran los formularios previamente nombrados; tant
 En el archivo views se encuentran desarrolladas las vistas que luego, se podran ver a través del servidor.
 
 En el archivo templates/Products se encuentran los siguientes archivos:
-☼ products.html: Es el que le da el diseño principal a la página; tiene heredado el navbar.html desde la App de Home; que permite navegar gracias a los botones entre las tres pestañas, y también hereda desde el Home el footer que es común a las tres pestañas(Home/Product/Store).
+1. products.html: Es el que le da el diseño principal a la página; tiene heredado el navbar.html desde la App de Home; que permite navegar gracias a los botones entre las tres pestañas, y también hereda desde el Home el footer que es común a las tres pestañas(Home/Product/Store).
 
-☼ formulario-crear-producto.html
-☼ busqueda-producto-formulario.html
-☼ productos_list.html 
+2. formulario-crear-producto.html
+3. busqueda-producto-formulario.html
+4. productos_list.html 
 Estos tres archivos son necesarios para la creacion de formularios de la clase 'Producto' tanto para insertar datos, como de busquedas; los mismos tienen un 'block y endblock' con el contenido necesario para el formulario y esta insertado en el template original de producto.
 
-☼ crear-comentario-formulario.html
-☼ buscar_comentario_formulario.html
-☼ comentarios-list.html
+5. crear-comentario-formulario.html
+6. buscar_comentario_formulario.html
+7. comentarios-list.html
 De la misma manera que la anterior; estos archivos son utiles para la insersión de datos y busqueda en BD de la clase 'Comentario'
 
-☼ crear-categorias-formulario.html ; el mismo sirve para la insersión de datos al formulario de la clase 'CategoriaProductos'
+8. crear-categorias-formulario.html ; el mismo sirve para la insersión de datos al formulario de la clase 'CategoriaProductos'
 
 Por ultimo se encuentra la App Store; en la misma se encuentra la siguiente URL
 path ('Store/', views.Store, name='Store'),
 
 En templates
-☼ Store.html : se encuentra el template principal de ésta pestaña la cual tiene heredado el navbar que permite navegar gracias a los botones entre las tres pestañas y también hereda desde el Home el footer que es común a las tres pestañas(Home/Product/Store).
+☼ Store.html : se encuentra el template principal de ésta pestaña la cual tiene heredado el navbar que permite navegar gracias a los botones entre las tres pestañas y también hereda desde Home el footer que es común a las tres pestañas(Home/Product/Store).
