@@ -25,7 +25,7 @@ En la carpeta Static de Home se encuentran todos los archivos estaticos provenie
 ## APP Product:
 En esta aplicación están desarrollados los 3 modelos solicitados para esta consigna y los formularios correspondientes; allí se encuentra: 
 - la clase 'Producto'
-- la clase 'Comentario' y
+- la clase 'Comentario'
 - la clase 'CategoriaProducto'
 
 Hay formularios para crear nuevos datos a las clases de PRODUCTO, COMENTARIO Y CATEGORIAPRODUCTO; 
