@@ -57,7 +57,9 @@ En el archivo templates/Products se encuentran los siguientes archivos:
 5. crear-comentario-formulario.html
 6. buscar_comentario_formulario.html
 7. comentarios-list.html
-De la misma manera que la anterior; estos archivos son utiles para la insersión de datos y busqueda en BD de la clase 'Comentario'
+- Estos tres archivos (5.6.7) son necesarios para la creacion de formularios de la clase 'Comentario' para insertar datos, y buscar en la base de datos
+ 
+De la misma manera que la anterior; estos archivos son utiles para la insersión de datos y busqueda en BD de la clase 'Comentario'.
 
 8. crear-categorias-formulario.html ; el mismo sirve para la insersión de datos al formulario de la clase 'CategoriaProductos'
 
